@@ -1,4 +1,4 @@
-I choose https://www.kaggle.com/jessicali9530/honey-production/data as the data to use.
+I choose https://www.kaggle.com/jessicali9530/honey-production/data as the data to use, which is about honey production.
 
 # Single Continuous Variable 4 Ways
 The variable in question is total production.  I limited this query to the state of Alabama and ordered the dataset by year.
@@ -6,10 +6,26 @@ The variable in question is total production.  I limited this query to the state
 1.
 Here we see the mean with the variance in production, which is good if we want to get an idea of how much fluctuation there is.
 
+```python
+plt.boxplot(honey_prod)  # alpha just controls the opacity
+plt.ylabel('Amount Produced in Thousands')
+plt.legend(loc='upper right')
+plt.title('Plot 1: Boxplot of AL')
+plt.show()
+```
+
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%201%20boxplot.png)
 
 2.
 This doesn't have historic data, but we get a better idea of where possible medians in production are, perhaps due to economic changes historically in the economy.
+
+```python
+plt.hist(honey_prod, color='red')  # alpha just controls the opacity
+plt.xlabel('Amount Produced in Thousands')
+plt.legend(loc='upper right')
+plt.title('Plot 2: Hist of Honey Production in AL')
+plt.show()
+```
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%202%20hist.png)
 
@@ -18,11 +34,34 @@ In these last two plots I had to include the year.
 3.
 This gives us a production trend, so that we see it decreasing.  The colors are distracting though.
 
+```python
+sns.set(style="darkgrid")
+
+g = sns.factorplot(x="year", y="totalprod", data=honey_prod_year,
+                   size=6, kind="bar", palette="pastel", ci=95)
+g.despine(left=True)
+g.set_ylabels("Total Production")
+g.set_xlabels("Year")
+plt.title('Barplot: Production of Honey in AL')
+plt.show()
+```
+
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%203%20bar.png)
 
 4.
 This is a better trend as the colors are less distracting, but the colors still add too much information.
 
+```python
+sns.set(style="darkgrid")
+
+g = sns.factorplot(x="year", y="totalprod", data=honey_prod_year,
+                   size=6, kind="point", palette="pastel", ci=95)
+g.despine(left=True)
+g.set_ylabels("Total Production")
+g.set_xlabels("Year")
+plt.title('Barplot: Production of Honey in AL')
+plt.show()
+```
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%204%20point.png)
 
 
