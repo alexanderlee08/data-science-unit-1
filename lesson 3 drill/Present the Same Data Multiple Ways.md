@@ -49,27 +49,39 @@ We see here the same plot as plot 5 but with a regression line.  The regression 
 # One continuous and one categorical and six different ways.
 
 So in this data there are 50 states.  I think that will be too much so I am just going to choose 3 different states, AL, HI and NY
+
 1.
 Here we see a wide variance in what NY has produced when compared to AL and HI.  This chart seems to waste space but I think its a fair comparison.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%208%20v2.png)
+
 2.
 Here we see the range again, with the mean in a box plot.  The state is on the Y axis though so it seems a little weird.  I guess this chart would make sense if we were interested in where most of the honey was coming from instead of which state made what.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%209.png)
+
 3.
 This is the same data but a better comparison of state production.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%2010.png)
+
 4.
 Again we see the range of NY's production.  We get a better sense of the magnitude of difference in production.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%2011.png)
+
 5.
 This chart emphasizes the variance between their means of production but it also presents the difference in production.  Because the mean is just floating in space, I think the variance is emphasized.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%2012.png)
+
 6.
 This chart gives us the difference in production historically, so its useful to see the trends.  NY really dropped whereas HI and AL didn't appear to do so, even though from the previous charts we know that AL's production dropped quite a bit.  NY skews the scale by a great deal.
 
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/plot%2013.png)
+
+# Challenge
+
+I am going to look at the data for BTC.
+
+
