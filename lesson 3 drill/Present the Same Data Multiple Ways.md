@@ -84,4 +84,8 @@ This chart gives us the difference in production historically, so its useful to 
 
 I am going to look at the data for BTC.
 
+The four variables I will look at will be the high, low, open and close pricing.  These four variables have a set relationship already, somewhat, since they are different values of the same thing at different periods.
 
+I chart them below but limit the domain of the chart to one month.  Originally I had it longer but it was too hard to see what was going on with 4 variables in the chart.  We see that the most stable period in this chart is around the holidays, presumably because people are not trading.  Then we see a dip at the end of the year, perhaps reflecting the confidence of investors going into 2018.
+
+![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/challenge.png)
