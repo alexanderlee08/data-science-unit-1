@@ -88,4 +88,20 @@ The four variables I will look at will be the high, low, open and close pricing.
 
 I chart them below but limit the domain of the chart to one month.  Originally I had it longer but it was too hard to see what was going on with 4 variables in the chart.  We see that the most stable period in this chart is around the holidays, presumably because people are not trading.  Then we see a dip at the end of the year, perhaps reflecting the confidence of investors going into 2018.
 
+```python
+fig, (ax1) = plt.subplots(1, 1, sharex=True, figsize=(10, 5))
+
+ax1.fill_between(BTC['Date'], BTC['High'], BTC['Low'], alpha = .5, color='red', label = 'High-Low')
+ax1.set_ylabel('Price')
+ax1.fill_between(BTC['Date'], BTC['Open'], BTC['Close'], alpha = .5, color = 'blue', label = 'Open-Close')
+
+#ax2.fill_between(BTC['Date'], BTC['Open'], BTC['Close'])
+#ax2.set_ylabel('between y1 and 1')
+plt.legend(loc='upper left')
+myLocator = mticker.MultipleLocator(4)
+ax1.xaxis.set_major_locator(myLocator)
+ax1.set_xlabel('Date')
+ax1.set_title('BTC prices in Dec 2017')
+```
+
 ![](https://github.com/alexanderlee08/data-science-unit-1/blob/master/lesson%203%20drill/challenge.png)
